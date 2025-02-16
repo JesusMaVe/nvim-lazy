@@ -17,3 +17,17 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 	command = "silent! EslintFixAll",
 	group = vim.api.nvim_create_augroup("MyAutocmdsJavaScripFormatting", {}),
 })
+
+-- Show `` in specific files
+vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+	pattern = { "*.txt", "*.md", "*.tex" },
+	command = "setlocal spell",
+})
+
+-- Highlight on yank
+vim.api.nvim_create_autocmd("TextYankPost", {
+	group = vim.api.nvim_create_augroup("highlight_yank", { clear = true }),
+	callback = function()
+		vim.highlight.on_yank({ higroup = "TabLineSel", timeout = 200 })
+	end,
+})

@@ -6,6 +6,7 @@ return {
 			local configs = require("nvim-treesitter.configs")
 			configs.setup({
 				ensure_installed = {
+					"graphql",
 					"lua",
 					"javascript",
 					"tsx",
@@ -15,6 +16,7 @@ return {
 					"markdown",
 					"html",
 					"css",
+					"bash",
 				},
 				auto_install = true,
 				highlight = { enable = true },

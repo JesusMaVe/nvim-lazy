@@ -14,8 +14,6 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
 	spec = {
 		{ import = "plugins" },
-		{ import = "kickstart.plugins.autoformat" },
-		{ import = "plugins.lspconfig" },
 	},
 	change_detection = {
 		enabled = false,
@@ -34,4 +32,11 @@ require("lazy").setup({
 			},
 		},
 	},
+	debug = false,
+	ui = {
+		border = "rounded",
+		-- The backdrop opacity. 0 is fully opaque, 100 is fully transparent.
+		backdrop = 100,
+	},
 })
+vim.keymap.set("n", "<leader>l", "<cmd>:Lazy<cr>")

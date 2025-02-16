@@ -37,3 +37,16 @@ vim.api.nvim_set_keymap("n", "N", "Nzzzv", { noremap = true, silent = true })
 
 -- Abrir un nuevo terminal en un split horizontal
 vim.api.nvim_set_keymap("n", "<leader>t", ":split | terminal<CR>", { noremap = true, silent = true })
+
+-- Select whole file
+vim.keymap.set("n", "<leader>sa", "ggVG")
+
+-- Remove highlights
+vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
+
+vim.keymap.set("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>")         -- Go to Definition
+vim.keymap.set("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>")     -- Go to Implementation
+vim.keymap.set("n", "<leader>r", "<cmd>lua vim.lsp.buf.rename()<CR>")      -- Rename Symbol
+vim.keymap.set("n", "<leader>a", "<cmd>lua vim.lsp.buf.code_action()<CR>") -- Code Actions
+vim.keymap.set("n", "gy", "<cmd>lua vim.lsp.buf.type_definition()<CR>")    -- Type Definition
+vim.keymap.set("n", "Ñ", "<cmd>lua vim.lsp.buf.signature_help()<CR>")      -- Signature Help
