@@ -34,6 +34,4 @@ return {
 	{ "numToStr/Comment.nvim", opts = {} },
 	-- Detect tabstop and shiftwidth automatically
 	"tpope/vim-sleuth",
-	-- a collection of lua functions
-	"nvim-lua/plenary.nvim",
 }
