@@ -26,7 +26,7 @@ return {
 			},
 			refresh = 50,
 		},
-		words = { enabled = true },
+		words = { enabled = false },
 		lazygit = {
 			win = { backdrop = false },
 		},
