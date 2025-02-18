@@ -2,4 +2,4 @@
 
 ### JesusMaVe Neovim 2025
 
-Neovim es un editor de texto altamente configurable que permite a los usuarios mejorar su productividad mediante el u
+Neovim es un editor de texto altamente configurable que permite a los usuarios mejorar su productividad mediante el uso de plugins
